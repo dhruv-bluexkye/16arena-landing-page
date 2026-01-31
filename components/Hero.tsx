@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             {/* Main Headline - Order 1 on mobile */}
             <div 
               ref={textRef}
-              className={`order-1 pt-4 lg:pt-0 fade-in-left ${textVisible ? 'visible' : ''}`}
+              className={`order-1 pt-8 lg:pt-0 fade-in-left ${textVisible ? 'visible' : ''}`}
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-white leading-[1.1]">
                 The Ultimate<br />
