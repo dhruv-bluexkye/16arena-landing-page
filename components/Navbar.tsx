@@ -60,20 +60,21 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black/70 backdrop-blur-lg z-30 top-20 md:hidden"
+          className="fixed inset-0 bg-black/90 backdrop-blur-2xl z-30 top-20 md:hidden"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
 
       {/* Mobile Menu */}
       <div 
-        className={`md:hidden fixed top-20 left-0 w-full bg-surface-dark/95 backdrop-blur-xl border-b border-white/10 z-40 transition-all duration-300 ease-in-out ${
+        className={`md:hidden fixed top-20 left-0 w-full bg-surface-dark backdrop-blur-2xl border-b border-white/10 z-40 transition-all duration-300 ease-in-out ${
           isMenuOpen 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 -translate-y-full pointer-events-none'
         }`}
+        style={{ backgroundColor: 'rgba(18, 18, 18, 0.98)' }}
       >
-        <div className="px-4 pt-4 pb-6 space-y-2">
+        <div className="px-4 pt-4 pb-6 space-y-2 " style={{ backdropFilter: 'blur(20px)' }}>
           <a 
             href="#" 
             onClick={() => setIsMenuOpen(false)}
