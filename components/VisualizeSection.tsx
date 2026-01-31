@@ -12,11 +12,11 @@ const VisualizeSection: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-start">
           
           <div 
             ref={textRef}
-            className={`order-2 lg:order-1 fade-in-left ${textVisible ? 'visible' : ''}`}
+            className={`order-1 lg:order-1 fade-in-left ${textVisible ? 'visible' : ''} pt-0 lg:pt-8`}
           >
             <span className="material-symbols-outlined text-4xl text-primary mb-6 p-3 bg-primary/10 rounded-xl border border-primary/20">calendar_month</span>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white leading-tight mb-6">
@@ -31,7 +31,7 @@ const VisualizeSection: React.FC = () => {
 
           <div 
             ref={visualRef}
-            className={`order-1 lg:order-2 relative h-[500px] sm:h-[600px] flex items-end justify-center fade-in-right ${visualVisible ? 'visible' : ''}`}
+            className={`order-2 lg:order-2 relative h-[400px] sm:h-[400px] lg:h-auto lg:min-h-[500px] flex items-end justify-center lg:self-end fade-in-right ${visualVisible ? 'visible' : ''}`}
           >
             <div 
               ref={parallaxRef}

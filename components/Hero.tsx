@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             {/* Main Headline - Order 1 on mobile */}
             <div 
               ref={textRef}
-              className={`order-1 fade-in-left ${textVisible ? 'visible' : ''}`}
+              className={`order-1 pt-4 lg:pt-0 fade-in-left ${textVisible ? 'visible' : ''}`}
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-white leading-[1.1]">
                 The Ultimate<br />
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Play. Compete. Earn Rewards. - Order 2 on mobile */}
-            <div className="order-2">
+            <div className="order-2 pt-2 lg:pt-0">
               <p className="text-xl sm:text-2xl font-display text-gray-500 uppercase tracking-widest">
                 Play. Compete. Earn Rewards.
               </p>
