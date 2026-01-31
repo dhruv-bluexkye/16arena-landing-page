@@ -13,7 +13,7 @@ const PrivacyPolicy: React.FC = () => {
                 <span className="material-symbols-outlined">arrow_back</span> Back to Home
             </a>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Privacy Policy – 16Arena</h1>
-            <p className="text-gray-400">Effective Date: [Add launch date]</p>
+            <p className="text-gray-400">Effective Date: 31/01/2026</p>
         </div>
 
         <div className="space-y-8 text-gray-300 leading-relaxed font-light bg-surface-dark border border-white/5 p-8 md:p-12 rounded-2xl">
