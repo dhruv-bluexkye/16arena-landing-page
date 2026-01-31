@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Terms from './components/Terms';
 import Contact from './components/Contact';
+import DeleteAccount from './components/DeleteAccount';
 import { useScrollProgress } from './hooks/useScrollAnimation';
 
 const App: React.FC = () => {
@@ -35,6 +36,8 @@ const App: React.FC = () => {
         return <Terms />;
       case '#contact':
         return <Contact />;
+      case '#delete-account':
+        return <DeleteAccount />;
       default:
         return (
           <>
