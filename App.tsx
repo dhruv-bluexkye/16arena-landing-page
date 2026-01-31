@@ -9,6 +9,7 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import Terms from './components/Terms';
 import Contact from './components/Contact';
 import DeleteAccount from './components/DeleteAccount';
+import CSAE from './components/CSAE';
 import { useScrollProgress } from './hooks/useScrollAnimation';
 
 const App: React.FC = () => {
@@ -38,6 +39,8 @@ const App: React.FC = () => {
         return <Contact />;
       case '#delete-account':
         return <DeleteAccount />;
+      case '#csae-policy':
+        return <CSAE />;
       default:
         return (
           <>
