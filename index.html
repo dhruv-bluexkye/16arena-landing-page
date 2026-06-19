@@ -3,10 +3,79 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>16Arena</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+
+    <!-- Primary SEO -->
+    <title>16Arena — The Ultimate Gaming Arena | Play Esports & Earn Rewards</title>
+    <meta name="description" content="16Arena is the ultimate esports platform. Join high-stakes tournaments, compete in skill-based games, and complete quests to earn real rewards. Download the app — trusted by 15,000+ players." />
+    <meta name="keywords" content="16Arena, esports platform, gaming arena, esports tournaments, play to earn, skill-based games, mobile esports, gaming rewards, competitive gaming, esports app" />
+    <meta name="author" content="16Arena" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#FF5722" />
+    <link rel="canonical" href="https://16arena.com/" />
+
+    <!-- iOS Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6759313578" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="16Arena" />
+    <meta property="og:title" content="16Arena — India's Esports Platform | Enter the Arena" />
+    <meta property="og:description" content="Compete in daily esports tournaments and scrims, play hyper-casual games, and earn real rewards. India's esports platform for mobile, PC & console — trusted by 15,000+ players." />
+    <meta property="og:url" content="https://16arena.com/" />
+    <meta property="og:image" content="https://16arena.com/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="16Arena — India's Esports Platform" />
+    <meta name="twitter:description" content="Compete in daily esports tournaments and scrims, play hyper-casual games, and earn real rewards. Trusted by 15,000+ players." />
+    <meta name="twitter:image" content="https://16arena.com/assets/og-image.jpg" />
+
+    <!-- Structured Data: Mobile App (enables rich results in Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "16Arena - Esports Platform",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "GameApplication",
+      "description": "India's esports platform. Compete in daily tournaments and scrims, play hyper-casual games, and earn real rewards across mobile, PC, and console titles.",
+      "url": "https://16arena.com/",
+      "downloadUrl": "https://apps.apple.com/in/app/16arena-esports-platform/id6759313578",
+      "author": { "@type": "Organization", "name": "Metaninza Gaming Private Limited" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "16Arena",
+      "legalName": "Metaninza Gaming Private Limited",
+      "url": "https://16arena.com/",
+      "logo": "https://16arena.com/assets/logo.png",
+      "email": "16arena.com@gmail.com",
+      "sameAs": [
+        "https://www.instagram.com/16arenaofficial/",
+        "https://www.youtube.com/@16arenaOfficial",
+        "https://x.com/16arenaOfficial",
+        "https://www.linkedin.com/company/16arenalabs/",
+        "https://discord.com/invite/XUA4NBvVhy"
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;800;900&family=Saira+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script>
         tailwind.config = {
@@ -14,14 +83,18 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#FF5722",
-                        "primary-hover": "#e64a19",
-                        "background-dark": "#050505",
-                        "surface-dark": "#121212",
+                        primary: "#FF6A00",
+                        "primary-light": "#FF973C",
+                        "primary-hover": "#e65f00",
+                        "background-dark": "#0A0A0C",
+                        "surface-dark": "#131318",
+                        "surface-raised": "#1A1A20",
+                        "steel": "#2A3142",
                         "surface-light": "#ffffff",
                     },
                     fontFamily: {
-                        display: ["'Chakra Petch'", "sans-serif"], 
+                        display: ["'Saira'", "sans-serif"],
+                        condensed: ["'Saira Condensed'", "sans-serif"],
                         sans: ["'Inter'", "sans-serif"],
                     },
                     boxShadow: {
@@ -80,9 +153,107 @@
             background: radial-gradient(circle at center, #2a2a2a 0%, #121212 100%);
             box-shadow: inset 0 -5px 15px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.5);
         }
-        
+
+        /* === 16Arena design system === */
+
+        /* Angular facet — echoes the logo's diagonal cuts. Top-right + bottom-left clipped. */
+        .clip-facet {
+            clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+        }
+        .clip-facet-sm {
+            clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+        }
+        /* Slanted edge for accent strips */
+        .clip-slant {
+            clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+        }
+
+        /* Gradient text matching the brand orange */
+        .text-gradient {
+            background: linear-gradient(135deg, #FF973C 0%, #FF6A00 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Ambient dual-tone glow: warm orange + cool steel counter-light */
+        .glow-warm { background: radial-gradient(circle, rgba(255,106,0,0.18) 0%, transparent 70%); }
+        .glow-cool { background: radial-gradient(circle, rgba(72,98,150,0.16) 0%, transparent 70%); }
+
+        /* Technical grid atmosphere */
+        .grid-bg {
+            background-image:
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 75%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 75%);
+        }
+
+        /* Animated gradient border for feature cards */
+        .border-glow {
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .border-glow::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255,106,0,0.6), transparent 40%, transparent 60%, rgba(255,151,60,0.4));
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .border-glow:hover::before { opacity: 1; }
+
+        /* Eyebrow label with accent tick */
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: #FF973C;
+        }
+        .eyebrow::before {
+            content: "";
+            width: 28px;
+            height: 2px;
+            background: linear-gradient(90deg, #FF6A00, transparent);
+        }
+
+        /* Image-backed card overlay: darkens top for legible text */
+        .card-img-overlay {
+            background: linear-gradient(180deg, rgba(10,10,12,0.92) 0%, rgba(10,10,12,0.55) 45%, rgba(10,10,12,0.85) 100%);
+        }
+        /* Headline kerning for the big condensed display type */
+        .display-tight { letter-spacing: -0.01em; }
+
+        /* Marquee for the trust/stats strip */
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 28s linear infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track { animation: none; }
+            .animate-float, .animate-float-delayed, .animate-float-slow { animation: none !important; }
+        }
+
         body {
-            background-color: #050505;
+            background-color: #0A0A0C;
             color: #f3f4f6;
             overflow-x: hidden;
         }
@@ -178,7 +349,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
 <body>
     <div id="root"></div>

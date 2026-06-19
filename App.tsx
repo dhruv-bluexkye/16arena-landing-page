@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import SocialSidebar from './components/SocialSidebar';
 import Hero from './components/Hero';
-import Levels from './components/Levels';
-import VisualizeSection from './components/VisualizeSection';
+import TrustStrip from './components/TrustStrip';
+import Arenas from './components/Arenas';
+import HowItWorks from './components/HowItWorks';
+import CommandCenter from './components/CommandCenter';
+import Rewards from './components/Rewards';
+import StatsBand from './components/StatsBand';
+import DownloadCTA from './components/DownloadCTA';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Terms from './components/Terms';
@@ -48,8 +53,13 @@ const App: React.FC = () => {
         return (
           <>
             <Hero />
-            <Levels />
-            <VisualizeSection />
+            <TrustStrip />
+            <Arenas />
+            <HowItWorks />
+            <CommandCenter />
+            <Rewards />
+            <StatsBand />
+            <DownloadCTA />
           </>
         );
     }

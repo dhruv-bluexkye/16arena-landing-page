@@ -1,87 +1,111 @@
 import React from 'react';
 import { useScrollAnimation, useParallax } from '../hooks/useScrollAnimation';
-import heroNinja from '../assets/hero-ninja.png';
+import heroNinja from '../assets/hero-ninja.webp';
+import heroBg from '../assets/arena-hero-bg.jpg';
+import StoreButtons from './StoreButtons';
+import { PLAYER_COUNT } from '../config/links';
 
 const Hero: React.FC = () => {
   const { elementRef: textRef, isVisible: textVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
   const { elementRef: visualRef, isVisible: visualVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
-  const { elementRef: parallaxRef, offset } = useParallax(0.3);
+  const { elementRef: parallaxRef, offset } = useParallax(0.25);
 
   return (
-    <section className="relative h-screen overflow-hidden bg-background-dark flex items-center">
-      {/* Background Glows */}
-      <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-primary/5 blur-[150px] rounded-full pointer-events-none -z-10 transform translate-x-1/4 -translate-y-1/4"></div>
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-500/5 blur-[150px] rounded-full pointer-events-none -z-10 transform -translate-x-1/4 translate-y-1/4"></div>
+    <section id="home" className="relative min-h-[100svh] overflow-hidden bg-background-dark flex items-center">
+      {/* Cinematic arena background */}
+      <img
+        src={heroBg}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-70"
+      />
+      {/* Legibility scrims */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/70 to-background-dark/30" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-background-dark/80" aria-hidden="true"></div>
+      <div className="absolute inset-0 grid-bg opacity-60" aria-hidden="true"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full h-full flex items-center pt-20">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center w-full">
-          
-          {/* Left Column - Text Content (Desktop) / Ordered Content (Mobile) */}
-          <div className="flex flex-col w-full lg:col-span-1 space-y-6 lg:space-y-8">
-            {/* Main Headline - Order 1 on mobile */}
-            <div 
-              ref={textRef}
-              className={`order-1 pt-8 lg:pt-0 fade-in-left ${textVisible ? 'visible' : ''}`}
-            >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-white leading-[1.1]">
-                The Ultimate<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400 drop-shadow-lg shadow-primary/50">
-                  Gaming Arena
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 pb-20 lg:py-28">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-6 items-center">
+
+          {/* Copy */}
+          <div
+            ref={textRef}
+            className={`flex flex-col fade-in-left ${textVisible ? 'visible' : ''}`}
+          >
+            <div className="flex flex-wrap items-center gap-3 mb-7">
+              <span className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 text-green-400 px-3 py-1.5 rounded-full text-xs font-semibold font-condensed tracking-widest uppercase">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-              </h1>
+                Live Now
+              </span>
+              <span className="eyebrow">India's Esports Platform</span>
             </div>
 
-            {/* Play. Compete. Earn Rewards. - Order 2 on mobile */}
-            <div className="order-2 pt-2 lg:pt-0">
-              <p className="text-xl sm:text-2xl font-display text-gray-500 uppercase tracking-widest">
-                Play. Compete. Earn Rewards.
-              </p>
+            <h1 className="font-display font-black text-white uppercase leading-[0.86] display-tight text-6xl sm:text-7xl lg:text-8xl">
+              Enter the
+              <span className="block text-gradient">Arena</span>
+            </h1>
+
+            <p className="mt-7 text-lg sm:text-xl text-gray-300 max-w-xl leading-relaxed">
+              Compete in daily tournaments and scrims across your favourite mobile, PC, and console
+              titles. Climb the leaderboards, join the squad, and turn skill into real rewards.
+            </p>
+
+            <div className="mt-9">
+              <StoreButtons size="lg" />
             </div>
 
-            {/* Other Content (Description & Status) - Order 4 on mobile */}
-            <div className="order-4 space-y-6">
-              <p className="text-base sm:text-lg text-gray-400 max-w-lg leading-relaxed border-l-2 border-primary/50 pl-4">
-                Join high-stakes esports tournaments, compete in casual games, or complete quests to earn rewards. Your skill, your earnings.
-              </p>
-
-              <div className="max-w-md relative">
-                 <div className="inline-flex items-center gap-4 bg-surface-dark/50 border border-white/10 p-2 pr-6 rounded-full backdrop-blur-md">
-                     <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/30 uppercase tracking-wider">Status</span>
-                     <span className="text-white font-medium text-sm">Platform Launching Soon</span>
-                 </div>
-                 <p className="mt-4 text-xs text-gray-500">Follow us on social media for updates.</p>
-              </div>
-            </div>
+            <dl className="mt-10 flex flex-wrap items-end gap-x-10 gap-y-5">
+              <Stat value={PLAYER_COUNT} label="Active Players" />
+              <span className="hidden sm:block w-px h-12 bg-white/10" aria-hidden="true"></span>
+              <Stat value="Daily" label="Tournaments & Scrims" />
+              <span className="hidden sm:block w-px h-12 bg-white/10" aria-hidden="true"></span>
+              <Stat value="iOS + Android" label="Play Anywhere" />
+            </dl>
           </div>
 
-          {/* Right Column - Ninja Visual Content - Order 3 on mobile */}
-          <div 
+          {/* Mascot */}
+          <div
             ref={visualRef}
-            className={`relative w-full min-h-[250px] sm:min-h-[300px] lg:min-h-[500px] flex justify-center items-center order-3 lg:order-2 lg:justify-end fade-in-right ${visualVisible ? 'visible' : ''}`}
+            className={`relative w-full min-h-[300px] sm:min-h-[380px] lg:min-h-[560px] flex justify-center lg:justify-end items-center fade-in-right ${visualVisible ? 'visible' : ''}`}
           >
-            <div 
+            <div
               ref={parallaxRef}
-              className="relative w-full h-full max-w-full max-h-[400px] sm:max-h-[500px] lg:max-h-full flex items-center justify-center parallax-container"
-              style={{ transform: `translateY(${offset * 0.3}px)` }}
+              className="relative parallax-container"
+              style={{ transform: `translateY(${offset * 0.25}px)` }}
             >
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent blur-3xl rounded-full"></div>
-              
-              {/* Ninja Image */}
-              <img 
-                src={heroNinja} 
-                alt="Ninja Character" 
-                className="relative z-10 w-full h-full max-w-full max-h-[400px] sm:max-h-[500px] lg:max-h-full object-contain drop-shadow-[0_0_30px_rgba(255,87,34,0.4)] animate-float"
+              <div className="absolute inset-0 glow-warm blur-2xl scale-125 rounded-full" aria-hidden="true"></div>
+              <img
+                src={heroNinja}
+                alt="16Arena ninja mascot leaping into battle"
+                width={820}
+                height={820}
+                fetchPriority="high"
+                decoding="async"
+                className="relative z-10 w-[260px] sm:w-[340px] lg:w-[460px] h-auto object-contain drop-shadow-[0_0_45px_rgba(255,106,0,0.5)] animate-float"
               />
-              
-              {/* Additional Glow Effects */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-primary/10 blur-2xl rounded-full"></div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Scroll cue */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-1.5 text-gray-500 animate-float-slow" aria-hidden="true">
+        <span className="text-[10px] font-condensed uppercase tracking-[0.35em]">Scroll</span>
+        <span className="material-symbols-outlined text-lg">keyboard_arrow_down</span>
+      </div>
     </section>
   );
 };
+
+const Stat: React.FC<{ value: string; label: string }> = ({ value, label }) => (
+  <div className="flex flex-col">
+    <dt className="sr-only">{label}</dt>
+    <dd className="text-2xl sm:text-3xl font-display font-extrabold text-white leading-none">{value}</dd>
+    <span className="text-xs text-gray-400 font-condensed uppercase tracking-widest mt-2">{label}</span>
+  </div>
+);
 
 export default Hero;
