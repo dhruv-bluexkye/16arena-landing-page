@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                         <div>
                             <h3 className="text-white font-bold text-lg mb-1">Email Us</h3>
                             <p className="text-gray-400 mb-2">For general inquiries and support.</p>
-                            <a href="mailto:16arena.com@gmail.com" className="text-primary hover:text-primary-hover hover:underline text-lg font-medium">16arena.com@gmail.com</a>
+                            <a href="mailto:support@16arena.com" className="text-primary hover:text-primary-hover hover:underline text-lg font-medium">support@16arena.com</a>
                         </div>
                     </div>
 

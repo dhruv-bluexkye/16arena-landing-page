@@ -13,7 +13,7 @@ const PrivacyPolicy: React.FC = () => {
                 <span className="material-symbols-outlined">arrow_back</span> Back to Home
             </a>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Privacy Policy – 16Arena</h1>
-            <p className="text-gray-400">Effective Date: 31/01/2026</p>
+            <p className="text-gray-400">Last updated on: 19 June 2026</p>
         </div>
 
         <div className="space-y-8 text-gray-300 leading-relaxed font-light bg-surface-dark border border-white/5 p-8 md:p-12 rounded-2xl">
@@ -151,20 +151,20 @@ const PrivacyPolicy: React.FC = () => {
               <li>Contact us with privacy concerns</li>
             </ul>
             <p>
-              To exercise any of these rights, email us.
+              To exercise any of these rights, email us at <a href="mailto:support@16arena.com" className="text-primary hover:text-primary-hover">support@16arena.com</a>.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">9. Children's Privacy</h2>
             <p className="mb-4">
-              16Arena is not intended for users under 13 years of age.
+              16Arena is not intended for users under 16 years of age.
             </p>
             <p className="mb-4">
-              We do not knowingly collect data from children under 13.
+              We do not knowingly collect data from children under 16.
             </p>
             <p>
-              If we discover such data, it will be deleted immediately.
+              If we discover such data has been collected, it will be deleted immediately.
             </p>
           </section>
 
@@ -190,7 +190,7 @@ const PrivacyPolicy: React.FC = () => {
             <div className="bg-black/30 p-4 rounded-lg border border-white/10">
               <p className="mb-2"><strong className="text-white">Company Name:</strong> 16Arena Labs Private Limited</p>
               <p className="mb-2"><strong className="text-white">Location:</strong> India</p>
-              <p><strong className="text-white">Email:</strong> <a href="mailto:16arena.com@gmail.com" className="text-primary hover:text-primary-hover">16arena.com@gmail.com</a></p>
+              <p><strong className="text-white">Email:</strong> <a href="mailto:support@16arena.com" className="text-primary hover:text-primary-hover">support@16arena.com</a></p>
             </div>
             <p className="mt-4">
               We will respond within a reasonable timeframe.

@@ -46,7 +46,7 @@ const StatsBand: React.FC = () => {
             href={SOCIAL_LINKS.discord}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-6 py-3 clip-facet-sm bg-[#5865F2]/15 border border-[#5865F2]/40 text-white hover:bg-[#5865F2]/25 transition-colors"
+            className="group inline-flex items-center gap-3 px-6 py-3 clip-facet-sm bg-[#5865F2]/25 text-white hover:bg-[#5865F2]/40 transition-colors"
           >
             <svg className="w-5 h-5 text-[#7d88f5]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d={discordPath} />

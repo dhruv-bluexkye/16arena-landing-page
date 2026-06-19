@@ -40,7 +40,7 @@ const CSAE: React.FC = () => {
             </p>
             <ul className="list-disc pl-5 space-y-2 marker:text-primary mb-4">
               <li>In-app reporting features, or</li>
-              <li>Email: <a href="mailto:16arena.com@gmail.com" className="text-primary hover:underline">16arena.com@gmail.com</a></li>
+              <li>Email: <a href="mailto:support@16arena.com" className="text-primary hover:underline">support@16arena.com</a></li>
             </ul>
           </section>
 
@@ -71,7 +71,7 @@ const CSAE: React.FC = () => {
             <div className="bg-black/30 p-4 rounded-lg border border-white/10">
               <p className="mb-2"><strong className="text-white">Company Name:</strong> 16Arena Labs Private Limited</p>
               <p className="mb-2"><strong className="text-white">Location:</strong> India</p>
-              <p><strong className="text-white">Email:</strong> <a href="mailto:16arena.com@gmail.com" className="text-primary hover:text-primary-hover">16arena.com@gmail.com</a></p>
+              <p><strong className="text-white">Email:</strong> <a href="mailto:support@16arena.com" className="text-primary hover:text-primary-hover">support@16arena.com</a></p>
             </div>
           </section>
         </div>

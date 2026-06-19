@@ -78,8 +78,9 @@ const ArenaCard: React.FC<{ data: ArenaCardData; index: number }> = ({ data, ind
   return (
     <article
       ref={elementRef}
-      className={`group relative clip-facet overflow-hidden flex flex-col bg-gradient-to-b from-surface-raised to-surface-dark border border-white/10 hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-500 fade-in-up ${isVisible ? 'visible' : ''} stagger-${index + 1}`}
+      className={`group relative clip-facet p-px bg-white/10 hover:bg-primary/50 hover:-translate-y-1.5 transition-all duration-500 fade-in-up ${isVisible ? 'visible' : ''} stagger-${index + 1}`}
     >
+     <div className="relative clip-facet h-full flex flex-col overflow-hidden bg-gradient-to-b from-surface-raised to-surface-dark">
       {/* Vivid image band */}
       <div className="relative h-48 lg:h-52 overflow-hidden">
         <img
@@ -100,7 +101,7 @@ const ArenaCard: React.FC<{ data: ArenaCardData; index: number }> = ({ data, ind
 
       {/* Content panel */}
       <div className="relative p-6 lg:p-7 pt-0 flex flex-col flex-1">
-        <span className="-mt-7 mb-4 self-start w-14 h-14 p-3.5 clip-facet-sm bg-primary text-white flex items-center justify-center shadow-neon ring-1 ring-primary/40">
+        <span className="-mt-7 mb-4 self-start w-14 h-14 p-3.5 clip-facet-sm bg-primary text-white flex items-center justify-center shadow-neon">
           <span className="material-symbols-outlined text-2xl">{data.icon}</span>
         </span>
         <h3 className="text-2xl lg:text-3xl font-display font-bold text-white uppercase tracking-tight mb-2.5">
@@ -116,6 +117,7 @@ const ArenaCard: React.FC<{ data: ArenaCardData; index: number }> = ({ data, ind
           ))}
         </ul>
       </div>
+     </div>
     </article>
   );
 };

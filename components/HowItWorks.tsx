@@ -75,7 +75,7 @@ const Step: React.FC<{ step: Step; index: number; isLast: boolean }> = ({ step, 
 
       <div className="flex flex-col items-center text-center">
         <div className="relative mb-6">
-          <div className="w-16 h-16 p-4 clip-facet-sm bg-gradient-to-br from-surface-raised to-background-dark border border-primary/25 text-primary-light flex items-center justify-center">
+          <div className="w-16 h-16 p-4 clip-facet-sm bg-gradient-to-br from-primary/25 to-primary/10 text-primary-light flex items-center justify-center">
             <span className="material-symbols-outlined text-3xl">{step.icon}</span>
           </div>
           <span className="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-primary text-white text-sm font-display font-bold flex items-center justify-center shadow-neon">

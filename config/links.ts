@@ -23,7 +23,7 @@ export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/company/16arenalabs/',
 };
 
-export const SUPPORT_EMAIL = '16arena.com@gmail.com';
+export const SUPPORT_EMAIL = 'support@16arena.com';
 export const SUPPORT_PHONE = '+919409651908';
 
 /** Approx. player count shown as social proof. Bump as you grow. */

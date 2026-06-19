@@ -13,7 +13,7 @@ const Terms: React.FC = () => {
                 <span className="material-symbols-outlined">arrow_back</span> Back to Home
             </a>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Terms of Service – 16Arena</h1>
-            <p className="text-gray-400">Effective Date: 31/01/2026</p>
+            <p className="text-gray-400">Last updated on: 19 June 2026</p>
         </div>
 
         <div className="space-y-8 text-gray-300 leading-relaxed font-light bg-surface-dark border border-white/5 p-8 md:p-12 rounded-2xl">
@@ -36,9 +36,9 @@ const Terms: React.FC = () => {
               To use 16Arena, you must:
             </p>
             <ul className="list-disc pl-5 space-y-2 marker:text-primary mb-4">
-              <li>Be at least 13 years of age</li>
+              <li>Be at least 16 years of age</li>
               <li>Have the legal capacity to enter into these Terms</li>
-              <li>Not be prohibited from using our services under applicable laws</li>
+              <li>Not be prohibited from using our services under any applicable law</li>
             </ul>
             <p>
               By creating an account, you represent and warrant that you meet all eligibility requirements.
@@ -99,23 +99,26 @@ const Terms: React.FC = () => {
               <li>You accept that tournament formats, prizes, and schedules may change without prior notice</li>
             </ul>
             <p>
-              We are not responsible for disputes between participants or technical issues that may affect gameplay.
+              We are not responsible for disputes between participants or technical issues beyond our control that may affect gameplay.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">6. Virtual Currency and Rewards</h2>
             <p className="mb-4">
-              Virtual currency, points, and rewards earned on 16Arena:
+              Arena Coins and other in-app rewards on 16Arena:
             </p>
             <ul className="list-disc pl-5 space-y-2 marker:text-primary mb-4">
-              <li>Have no real-world monetary value unless explicitly stated for specific withdrawal programs</li>
+              <li>Have no real-world monetary value unless explicitly stated for specific reward programs</li>
               <li>Cannot be transferred, sold, or exchanged outside the platform</li>
-              <li>Are subject to our terms and may be modified, suspended, or revoked at any time</li>
-              <li>May expire or be forfeited if your account is terminated</li>
+              <li>Are subject to modification, suspension, or revocation at any time</li>
+              <li>May be forfeited upon account termination</li>
             </ul>
+            <p className="mb-4">
+              Where cash rewards or shopping vouchers are explicitly offered, separate disbursement timelines apply as detailed in our <a href="#contest-rules" className="text-primary hover:text-primary-hover">Contest &amp; Tournament Rules</a>.
+            </p>
             <p>
-              We reserve the right to modify, suspend, or terminate reward programs at any time without prior notice.
+              We reserve the right to modify or discontinue any reward program at any time.
             </p>
           </section>
 
@@ -201,7 +204,7 @@ const Terms: React.FC = () => {
             <div className="bg-black/30 p-4 rounded-lg border border-white/10">
               <p className="mb-2"><strong className="text-white">Company Name:</strong> 16Arena Labs Private Limited</p>
               <p className="mb-2"><strong className="text-white">Location:</strong> India</p>
-              <p><strong className="text-white">Email:</strong> <a href="mailto:16arena.com@gmail.com" className="text-primary hover:text-primary-hover">16arena.com@gmail.com</a></p>
+              <p><strong className="text-white">Email:</strong> <a href="mailto:support@16arena.com" className="text-primary hover:text-primary-hover">support@16arena.com</a></p>
             </div>
           </section>
         </div>

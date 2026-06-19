@@ -25,10 +25,10 @@ const CommandCenter: React.FC = () => {
             ref={visualRef}
             className={`order-2 lg:order-1 relative h-[360px] sm:h-[460px] lg:min-h-[540px] flex items-end justify-center fade-in-left ${visualVisible ? 'visible' : ''}`}
           >
-            <div className="absolute inset-x-6 bottom-4 top-8 clip-facet bg-gradient-to-b from-white/[0.05] to-transparent border border-white/5" aria-hidden="true"></div>
+            <div className="absolute inset-x-6 bottom-4 top-8 clip-facet bg-gradient-to-b from-white/[0.05] to-transparent" aria-hidden="true"></div>
 
             {/* Floating stat chip */}
-            <div className="absolute top-8 right-2 sm:right-6 z-20 glass-panel clip-facet-sm px-4 py-3 animate-float-delayed" aria-hidden="true">
+            <div className="absolute top-8 right-2 sm:right-6 z-20 clip-facet-sm bg-surface-raised/90 backdrop-blur-md px-4 py-3 animate-float-delayed" aria-hidden="true">
               <div className="text-[10px] font-condensed uppercase tracking-widest text-gray-400">Weekly Rank</div>
               <div className="flex items-baseline gap-1.5">
                 <span className="text-2xl font-display font-extrabold text-gradient">#1</span>
@@ -71,7 +71,7 @@ const CommandCenter: React.FC = () => {
             <div className="space-y-5">
               {FEATURES.map((f) => (
                 <div key={f.title} className="flex items-start gap-4">
-                  <span className="shrink-0 w-11 h-11 p-2.5 clip-facet-sm bg-primary/12 border border-primary/25 text-primary-light flex items-center justify-center">
+                  <span className="shrink-0 w-11 h-11 p-2.5 clip-facet-sm bg-primary/15 text-primary-light flex items-center justify-center">
                     <span className="material-symbols-outlined text-xl">{f.icon}</span>
                   </span>
                   <div>

@@ -389,7 +389,7 @@ const DeleteAccount: React.FC = () => {
           </p>
           <p className="text-gray-400 text-sm leading-relaxed">
             If you have any questions or concerns about account deletion, please contact us at{' '}
-            <a href="mailto:16arena.com@gmail.com" className="text-primary hover:underline">16arena.com@gmail.com</a>
+            <a href="mailto:support@16arena.com" className="text-primary hover:underline">support@16arena.com</a>
           </p>
         </div>
       </div>

@@ -52,13 +52,15 @@ const RewardCard: React.FC<{ reward: Reward; index: number }> = ({ reward, index
   return (
     <div
       ref={elementRef}
-      className={`group clip-facet border-glow bg-gradient-to-br from-surface-raised to-surface-dark p-6 hover:-translate-y-1.5 transition-transform duration-500 fade-in-up ${isVisible ? 'visible' : ''} stagger-${index + 1}`}
+      className={`group clip-facet p-px bg-white/10 hover:bg-primary/50 hover:-translate-y-1.5 transition-all duration-500 fade-in-up ${isVisible ? 'visible' : ''} stagger-${index + 1}`}
     >
-      <div className="w-12 h-12 p-3 mb-5 clip-facet-sm bg-primary/10 border border-primary/25 text-primary-light flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+     <div className="clip-facet h-full bg-gradient-to-br from-surface-raised to-surface-dark p-6">
+      <div className="w-12 h-12 p-3 mb-5 clip-facet-sm bg-primary/15 text-primary-light flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
         <span className="material-symbols-outlined text-2xl">{reward.icon}</span>
       </div>
       <h3 className="text-lg font-display font-bold text-white uppercase tracking-tight mb-2">{reward.title}</h3>
       <p className="text-gray-400 text-sm leading-relaxed">{reward.desc}</p>
+     </div>
     </div>
   );
 };
