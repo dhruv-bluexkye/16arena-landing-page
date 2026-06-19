@@ -384,7 +384,7 @@ const DeleteAccount: React.FC = () => {
         <div className="mt-8 bg-surface-dark/50 border border-white/5 p-6 rounded-xl">
           <h3 className="text-white font-bold mb-3">About Account Deletion</h3>
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
-            <strong className="text-white">16Arena</strong>, operated by <strong className="text-white">Metaninza Gaming Private Limited</strong>, 
+            <strong className="text-white">16Arena</strong>, operated by <strong className="text-white">16Arena Labs Private Limited</strong>, 
             respects your right to delete your account and personal data. This process is designed to be secure and verifiable.
           </p>
           <p className="text-gray-400 text-sm leading-relaxed">

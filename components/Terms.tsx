@@ -20,7 +20,7 @@ const Terms: React.FC = () => {
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
             <p className="mb-4">
-              Welcome to 16Arena, operated by Metaninza Gaming Private Limited, India ("we," "us," or "our").
+              Welcome to 16Arena, operated by 16Arena Labs Private Limited, India ("we," "us," or "our").
             </p>
             <p className="mb-4">
               These Terms of Service ("Terms") govern your access to and use of the 16Arena mobile application and services. By downloading, installing, or using our app, you agree to be bound by these Terms.
@@ -130,7 +130,7 @@ const Terms: React.FC = () => {
               <li>Trademarks, service marks, and trade names</li>
             </ul>
             <p>
-              Are owned by Metaninza Gaming Private Limited or its licensors and are protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.
+              Are owned by 16Arena Labs Private Limited or its licensors and are protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.
             </p>
           </section>
 
@@ -160,7 +160,7 @@ const Terms: React.FC = () => {
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">9. Indemnification</h2>
             <p>
-              You agree to indemnify, defend, and hold harmless Metaninza Gaming Private Limited and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the service, violation of these Terms, or infringement of any rights of another party.
+              You agree to indemnify, defend, and hold harmless 16Arena Labs Private Limited and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the service, violation of these Terms, or infringement of any rights of another party.
             </p>
           </section>
 
@@ -199,7 +199,7 @@ const Terms: React.FC = () => {
               If you have questions about these Terms, please contact us:
             </p>
             <div className="bg-black/30 p-4 rounded-lg border border-white/10">
-              <p className="mb-2"><strong className="text-white">Company Name:</strong> Metaninza Gaming Private Limited</p>
+              <p className="mb-2"><strong className="text-white">Company Name:</strong> 16Arena Labs Private Limited</p>
               <p className="mb-2"><strong className="text-white">Location:</strong> India</p>
               <p><strong className="text-white">Email:</strong> <a href="mailto:16arena.com@gmail.com" className="text-primary hover:text-primary-hover">16arena.com@gmail.com</a></p>
             </div>

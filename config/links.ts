@@ -12,9 +12,8 @@ export const SITE_URL = 'https://16arena.com';
 export const APP_STORE_URL =
   'https://apps.apple.com/in/app/16arena-esports-platform/id6759313578';
 
-// 🔴 TODO: replace with your real Google Play listing URL
 export const PLAY_STORE_URL =
-  'https://play.google.com/store/apps/details?id=com.16arena.app';
+  'https://play.google.com/store/apps/details?id=com.sixteenarena.app';
 
 export const SOCIAL_LINKS = {
   discord: 'https://discord.com/invite/XUA4NBvVhy',

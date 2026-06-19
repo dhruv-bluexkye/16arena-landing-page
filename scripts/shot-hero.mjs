@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+import path from 'path';
+const OUT = path.resolve('scripts','shots');
+const base = process.env.SHOT_URL;
+const b = await chromium.launch({ channel: 'chrome' });
+const d = await (await b.newContext({ viewport:{width:1440,height:860} })).newPage();
+await d.goto(base,{waitUntil:'load'}); await d.waitForTimeout(1400);
+await d.screenshot({ path: path.join(OUT,'hero-desktop.png') });
+const m = await (await b.newContext({ viewport:{width:390,height:844}, deviceScaleFactor:2, isMobile:true })).newPage();
+await m.goto(base,{waitUntil:'load'}); await m.waitForTimeout(1400);
+await m.screenshot({ path: path.join(OUT,'hero-mobile.png') });
+await b.close(); console.log('hero shots done');

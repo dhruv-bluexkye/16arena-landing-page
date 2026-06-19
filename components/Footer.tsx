@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-sm text-gray-500">
-          <p>© 2026 Metaninza Gaming Private Limited. All rights reserved.</p>
+          <p>© 2026 16Arena Labs Private Limited. All rights reserved.</p>
           <p className="flex items-center gap-2 font-condensed uppercase tracking-widest text-xs">
             <span className="text-primary">◆</span> Built in India for gamers
           </p>

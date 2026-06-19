@@ -20,7 +20,7 @@ const PrivacyPolicy: React.FC = () => {
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
             <p className="mb-4">
-              Welcome to 16Arena, operated by Metaninza Gaming Private Limited, India.
+              Welcome to 16Arena, operated by 16Arena Labs Private Limited, India.
             </p>
             <p className="mb-4">
               We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data when you use our mobile application and services.
@@ -188,7 +188,7 @@ const PrivacyPolicy: React.FC = () => {
               If you have questions, concerns, or want to request data deletion, contact:
             </p>
             <div className="bg-black/30 p-4 rounded-lg border border-white/10">
-              <p className="mb-2"><strong className="text-white">Company Name:</strong> Metaninza Gaming Private Limited</p>
+              <p className="mb-2"><strong className="text-white">Company Name:</strong> 16Arena Labs Private Limited</p>
               <p className="mb-2"><strong className="text-white">Location:</strong> India</p>
               <p><strong className="text-white">Email:</strong> <a href="mailto:16arena.com@gmail.com" className="text-primary hover:text-primary-hover">16arena.com@gmail.com</a></p>
             </div>

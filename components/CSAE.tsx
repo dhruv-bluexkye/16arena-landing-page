@@ -69,7 +69,7 @@ const CSAE: React.FC = () => {
               For safety concerns, contact:
             </p>
             <div className="bg-black/30 p-4 rounded-lg border border-white/10">
-              <p className="mb-2"><strong className="text-white">Company Name:</strong> Metaninza Gaming Private Limited</p>
+              <p className="mb-2"><strong className="text-white">Company Name:</strong> 16Arena Labs Private Limited</p>
               <p className="mb-2"><strong className="text-white">Location:</strong> India</p>
               <p><strong className="text-white">Email:</strong> <a href="mailto:16arena.com@gmail.com" className="text-primary hover:text-primary-hover">16arena.com@gmail.com</a></p>
             </div>
