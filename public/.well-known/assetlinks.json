@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sixteenarena.app",
+      "sha256_cert_fingerprints": [
+        "E9:EA:97:64:67:1A:5C:1F:29:68:A2:E6:3F:BA:3A:64:44:1F:49:FB:80:F4:FD:3D:73:F5:AF:EE:7D:37:25:12"
+      ]
+    }
+  }
+]
