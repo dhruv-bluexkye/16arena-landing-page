@@ -16,6 +16,9 @@ import Contact from './components/Contact';
 import DeleteAccount from './components/DeleteAccount';
 import CSAE from './components/CSAE';
 import ContestRules from './components/ContestRules';
+import RefundPolicy from './components/RefundPolicy';
+import ReturnPolicy from './components/ReturnPolicy';
+import ShippingPolicy from './components/ShippingPolicy';
 import { useScrollProgress } from './hooks/useScrollAnimation';
 
 const App: React.FC = () => {
@@ -49,6 +52,12 @@ const App: React.FC = () => {
         return <CSAE />;
       case '#contest-rules':
         return <ContestRules />;
+      case '#refund-policy':
+        return <RefundPolicy />;
+      case '#return-policy':
+        return <ReturnPolicy />;
+      case '#shipping-policy':
+        return <ShippingPolicy />;
       default:
         return (
           <>

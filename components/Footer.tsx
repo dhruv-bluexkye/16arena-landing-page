@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-surface-dark border-t border-white/5 pt-16 pb-10 mb-16 lg:mb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1.3fr] gap-10 lg:gap-8 pb-12 border-b border-white/5">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.2fr] gap-10 lg:gap-8 pb-12 border-b border-white/5">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1 max-w-sm">
             <img src={logo} alt="16Arena" className="h-9 w-auto mb-4" />
@@ -42,6 +42,13 @@ const Footer: React.FC = () => {
             <FooterAnchor href="#csae-policy">Child Safety (CSAE)</FooterAnchor>
             <FooterAnchor href="#delete-account">Delete Account</FooterAnchor>
             <FooterAnchor href="#contact">Contact Support</FooterAnchor>
+          </FooterCol>
+
+          {/* Shop */}
+          <FooterCol title="Shop">
+            <FooterAnchor href="#refund-policy">Refund Policy</FooterAnchor>
+            <FooterAnchor href="#return-policy">Return Policy</FooterAnchor>
+            <FooterAnchor href="#shipping-policy">Shipping Policy</FooterAnchor>
           </FooterCol>
 
           {/* Download */}
