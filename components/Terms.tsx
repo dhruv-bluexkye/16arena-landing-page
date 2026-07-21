@@ -9,7 +9,7 @@ const Terms: React.FC = () => {
     <div className="pt-32 pb-24 min-h-screen bg-background-dark">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-            <a href="#" className="inline-flex items-center text-primary hover:text-white transition-colors gap-2 mb-6">
+            <a href="/" className="inline-flex items-center text-primary hover:text-white transition-colors gap-2 mb-6">
                 <span className="material-symbols-outlined">arrow_back</span> Back to Home
             </a>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Terms of Service – 16Arena</h1>
@@ -115,7 +115,7 @@ const Terms: React.FC = () => {
               <li>May be forfeited upon account termination</li>
             </ul>
             <p className="mb-4">
-              Where cash rewards or shopping vouchers are explicitly offered, separate disbursement timelines apply as detailed in our <a href="#contest-rules" className="text-primary hover:text-primary-hover">Contest &amp; Tournament Rules</a>.
+              Where cash rewards or shopping vouchers are explicitly offered, separate disbursement timelines apply as detailed in our <a href="/contest-rules" className="text-primary hover:text-primary-hover">Contest &amp; Tournament Rules</a>.
             </p>
             <p>
               We reserve the right to modify or discontinue any reward program at any time.

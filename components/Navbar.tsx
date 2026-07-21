@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
 import { APP_STORE_URL } from '../config/links';
 import { scrollToSection } from '../lib/scroll';
+import { navigate } from '../lib/router';
 
 const NAV_LINKS = [
   { id: 'arenas', label: 'Arenas' },
@@ -27,8 +28,7 @@ const Navbar: React.FC = () => {
 
   const goHome = () => {
     setIsMenuOpen(false);
-    if (window.location.hash && window.location.hash !== '#home') window.location.hash = '';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('/');
   };
 
   return (

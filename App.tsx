@@ -19,44 +19,50 @@ import ContestRules from './components/ContestRules';
 import RefundPolicy from './components/RefundPolicy';
 import ReturnPolicy from './components/ReturnPolicy';
 import ShippingPolicy from './components/ShippingPolicy';
+import { getRoute, navigate, onRouteChange } from './lib/router';
 import { useScrollProgress } from './hooks/useScrollAnimation';
 
 const App: React.FC = () => {
-  const [route, setRoute] = useState(window.location.hash);
+  const [route, setRoute] = useState(getRoute());
   const scrollProgress = useScrollProgress();
 
+  // Keep route state in sync with the URL (pushState nav, back/forward, legacy hash).
+  useEffect(() => onRouteChange(() => setRoute(getRoute())), []);
+
+  // Intercept clicks on internal links so clean paths navigate without a full reload.
   useEffect(() => {
-    const handleHashChange = () => {
-      setRoute(window.location.hash);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    const onClick = (e: MouseEvent) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const anchor = (e.target as HTMLElement).closest('a');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href');
+      if (!href || !href.startsWith('/') || anchor.getAttribute('target') === '_blank') return;
+      e.preventDefault();
+      navigate(href);
     };
-
-    // Set initial route
-    setRoute(window.location.hash);
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
   }, []);
 
   const renderContent = () => {
     switch (route) {
-      case '#privacy':
+      case 'privacy':
         return <PrivacyPolicy />;
-      case '#terms':
+      case 'terms':
         return <Terms />;
-      case '#contact':
+      case 'contact':
         return <Contact />;
-      case '#delete-account':
+      case 'delete-account':
         return <DeleteAccount />;
-      case '#csae-policy':
+      case 'csae-policy':
         return <CSAE />;
-      case '#contest-rules':
+      case 'contest-rules':
         return <ContestRules />;
-      case '#refund-policy':
+      case 'refund-policy':
         return <RefundPolicy />;
-      case '#return-policy':
+      case 'return-policy':
         return <ReturnPolicy />;
-      case '#shipping-policy':
+      case 'shipping-policy':
         return <ShippingPolicy />;
       default:
         return (

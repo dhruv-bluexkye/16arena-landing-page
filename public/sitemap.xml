@@ -6,23 +6,43 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://16arena.com/#privacy</loc>
+    <loc>https://16arena.com/privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://16arena.com/#terms</loc>
+    <loc>https://16arena.com/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://16arena.com/#contest-rules</loc>
+    <loc>https://16arena.com/contest-rules</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://16arena.com/#contact</loc>
+    <loc>https://16arena.com/refund-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://16arena.com/return-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://16arena.com/shipping-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://16arena.com/csae-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://16arena.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

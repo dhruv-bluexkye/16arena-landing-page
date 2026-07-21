@@ -1,5 +1,7 @@
+import { getRoute, pushPath } from './router';
+
 /** Smoothly scroll to an in-page section by id, accounting for the fixed navbar.
- *  If the user is on a legal subpage (#privacy etc.), return home first, then scroll. */
+ *  If the user is on a subpage (e.g. /privacy), return home first, then scroll. */
 export const scrollToSection = (id: string) => {
   const NAV_OFFSET = 72;
 
@@ -10,11 +12,10 @@ export const scrollToSection = (id: string) => {
     window.scrollTo({ top: y, behavior: 'smooth' });
   };
 
-  const onLegalPage = window.location.hash && window.location.hash !== '#home';
-  if (onLegalPage) {
-    window.location.hash = '';
-    // wait for the home view to mount before scrolling
-    setTimeout(doScroll, 140);
+  if (getRoute() !== '') {
+    // On a subpage — go home, then scroll once the home view mounts.
+    pushPath('/');
+    setTimeout(doScroll, 160);
   } else {
     doScroll();
   }

@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-            <a href="#" className="inline-flex items-center text-primary hover:text-white transition-colors gap-2 mb-6">
+            <a href="/" className="inline-flex items-center text-primary hover:text-white transition-colors gap-2 mb-6">
                 <span className="material-symbols-outlined">arrow_back</span> Back to Home
             </a>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Contact Support</h1>

@@ -9,7 +9,7 @@ const PrivacyPolicy: React.FC = () => {
     <div className="pt-32 pb-24 min-h-screen bg-background-dark">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-            <a href="#" className="inline-flex items-center text-primary hover:text-white transition-colors gap-2 mb-6">
+            <a href="/" className="inline-flex items-center text-primary hover:text-white transition-colors gap-2 mb-6">
                 <span className="material-symbols-outlined">arrow_back</span> Back to Home
             </a>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Privacy Policy – 16Arena</h1>

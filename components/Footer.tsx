@@ -36,19 +36,19 @@ const Footer: React.FC = () => {
 
           {/* Legal */}
           <FooterCol title="Legal">
-            <FooterAnchor href="#privacy">Privacy Policy</FooterAnchor>
-            <FooterAnchor href="#terms">Terms of Service</FooterAnchor>
-            <FooterAnchor href="#contest-rules">Contest Rules</FooterAnchor>
-            <FooterAnchor href="#csae-policy">Child Safety (CSAE)</FooterAnchor>
-            <FooterAnchor href="#delete-account">Delete Account</FooterAnchor>
-            <FooterAnchor href="#contact">Contact Support</FooterAnchor>
+            <FooterAnchor href="/privacy">Privacy Policy</FooterAnchor>
+            <FooterAnchor href="/terms">Terms of Service</FooterAnchor>
+            <FooterAnchor href="/contest-rules">Contest Rules</FooterAnchor>
+            <FooterAnchor href="/csae-policy">Child Safety (CSAE)</FooterAnchor>
+            <FooterAnchor href="/delete-account">Delete Account</FooterAnchor>
+            <FooterAnchor href="/contact">Contact Support</FooterAnchor>
           </FooterCol>
 
           {/* Shop */}
           <FooterCol title="Shop">
-            <FooterAnchor href="#refund-policy">Refund Policy</FooterAnchor>
-            <FooterAnchor href="#return-policy">Return Policy</FooterAnchor>
-            <FooterAnchor href="#shipping-policy">Shipping Policy</FooterAnchor>
+            <FooterAnchor href="/refund-policy">Refund Policy</FooterAnchor>
+            <FooterAnchor href="/return-policy">Return Policy</FooterAnchor>
+            <FooterAnchor href="/shipping-policy">Shipping Policy</FooterAnchor>
           </FooterCol>
 
           {/* Download */}

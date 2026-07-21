@@ -371,7 +371,7 @@ const DeleteAccount: React.FC = () => {
                 </div>
               </div>
               <a
-                href="#"
+                href="/"
                 className="inline-block px-6 py-3 bg-primary hover:bg-primary-hover text-white font-bold rounded-lg transition-colors"
               >
                 Return to Home
