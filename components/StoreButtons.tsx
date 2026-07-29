@@ -7,18 +7,29 @@ interface StoreButtonsProps {
   /** 'lg' for hero, 'sm' for compact areas */
   size?: 'lg' | 'sm';
   className?: string;
+  /** Override the store URLs (defaults to the 16Arena app). */
+  appStoreUrl?: string;
+  playStoreUrl?: string;
+  /** Product name used in the aria-labels. */
+  label?: string;
 }
 
-const StoreButtons: React.FC<StoreButtonsProps> = ({ size = 'lg', className = '' }) => {
+const StoreButtons: React.FC<StoreButtonsProps> = ({
+  size = 'lg',
+  className = '',
+  appStoreUrl = APP_STORE_URL,
+  playStoreUrl = PLAY_STORE_URL,
+  label = '16Arena',
+}) => {
   const h = size === 'lg' ? 'h-[52px]' : 'h-[44px]';
 
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
       <a
-        href={APP_STORE_URL}
+        href={appStoreUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Download 16Arena on the App Store"
+        aria-label={`Download ${label} on the App Store`}
         className="group inline-block transition-transform duration-300 hover:-translate-y-1 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-xl"
       >
         <img
@@ -29,10 +40,10 @@ const StoreButtons: React.FC<StoreButtonsProps> = ({ size = 'lg', className = ''
       </a>
 
       <a
-        href={PLAY_STORE_URL}
+        href={playStoreUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Get 16Arena on Google Play"
+        aria-label={`Get ${label} on Google Play`}
         className="group inline-block transition-transform duration-300 hover:-translate-y-1 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-xl"
       >
         <img
