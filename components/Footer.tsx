@@ -31,6 +31,7 @@ const Footer: React.FC = () => {
             <FooterButton onClick={() => scrollToSection('arenas')}>Arenas</FooterButton>
             <FooterButton onClick={() => scrollToSection('play')}>How it works</FooterButton>
             <FooterButton onClick={() => scrollToSection('rewards')}>Rewards</FooterButton>
+            <FooterAnchor href="/company">Company</FooterAnchor>
             <FooterButton onClick={() => scrollToSection('download')}>Download</FooterButton>
           </FooterCol>
 

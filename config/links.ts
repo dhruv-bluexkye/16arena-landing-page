@@ -19,6 +19,7 @@ export const SOCIAL_LINKS = {
   discord: 'https://discord.com/invite/XUA4NBvVhy',
   instagram: 'https://www.instagram.com/16arenaofficial/',
   youtube: 'https://www.youtube.com/@16arenaOfficial',
+  facebook: 'https://www.facebook.com/16Arenaofficial/',
   x: 'https://x.com/16arenaOfficial',
   linkedin: 'https://www.linkedin.com/company/16arenalabs/',
 };

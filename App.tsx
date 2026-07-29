@@ -19,6 +19,7 @@ import ContestRules from './components/ContestRules';
 import RefundPolicy from './components/RefundPolicy';
 import ReturnPolicy from './components/ReturnPolicy';
 import ShippingPolicy from './components/ShippingPolicy';
+import Company from './components/Company';
 import { getRoute, navigate, onRouteChange } from './lib/router';
 import { useScrollProgress } from './hooks/useScrollAnimation';
 
@@ -46,6 +47,8 @@ const App: React.FC = () => {
 
   const renderContent = () => {
     switch (route) {
+      case 'company':
+        return <Company />;
       case 'privacy':
         return <PrivacyPolicy />;
       case 'terms':

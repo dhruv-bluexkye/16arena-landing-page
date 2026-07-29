@@ -8,6 +8,7 @@
  */
 
 export const ROUTES = [
+  'company',
   'privacy',
   'terms',
   'contact',

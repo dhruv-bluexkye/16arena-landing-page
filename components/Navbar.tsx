@@ -55,6 +55,12 @@ const Navbar: React.FC = () => {
                 {l.label}
               </button>
             ))}
+            <a
+              href="/company"
+              className="text-sm font-condensed font-medium uppercase tracking-widest text-gray-300 hover:text-white transition-colors relative after:absolute after:left-0 after:-bottom-1.5 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all"
+            >
+              Company
+            </a>
           </div>
 
           {/* Actions */}
@@ -102,6 +108,13 @@ const Navbar: React.FC = () => {
               {l.label}
             </button>
           ))}
+          <a
+            href="/company"
+            onClick={() => setIsMenuOpen(false)}
+            className="block w-full text-left px-4 py-3 rounded-lg text-base font-condensed font-medium uppercase tracking-wider text-gray-200 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all"
+          >
+            Company
+          </a>
           <a
             href={APP_STORE_URL}
             target="_blank"
