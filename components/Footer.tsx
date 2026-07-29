@@ -59,6 +59,26 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Company information */}
+        <div className="pt-8 pb-8 border-b border-white/5">
+          <h3 className="text-xs font-condensed font-semibold uppercase tracking-[0.2em] text-gray-400 mb-5">Company Information</h3>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-sm text-gray-500 leading-relaxed">
+            <div>
+              <p className="text-gray-400 font-medium mb-1">Registered Office</p>
+              <p>66, Alpine Woods, Nr. Chuahan Vadi, Sanathal, Sanand, Ahmedabad – 382210, Gujarat, India</p>
+            </div>
+            <div>
+              <p className="text-gray-400 font-medium mb-1">Corporate Office</p>
+              <p>Office No. A704, Block A, Jagatpur Rd, near BSNL Office, off Sarkhej – Gandhinagar Highway, Jagatpur, Ahmedabad, Gujarat 382470</p>
+            </div>
+            <div>
+              <p className="text-gray-400 font-medium mb-1">Contact</p>
+              <p>16Arena Labs Private Limited</p>
+              <a href="mailto:support@16arena.com" className="text-primary hover:text-primary-hover">support@16arena.com</a>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-sm text-gray-500">
           <p>© 2026 16Arena Labs Private Limited. All rights reserved.</p>

@@ -28,4 +28,4 @@ export const SUPPORT_EMAIL = 'support@16arena.com';
 export const SUPPORT_PHONE = '+919409651908';
 
 /** Approx. player count shown as social proof. Bump as you grow. */
-export const PLAYER_COUNT = '15,000+';
+export const PLAYER_COUNT = '25,000+';
