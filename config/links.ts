@@ -24,8 +24,11 @@ export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/company/16arenalabs/',
 };
 
+/** 16Arena Shop — live digital marketplace (separate subdomain). */
+export const SHOP_URL = 'https://shop.16arena.com/';
+
 export const SUPPORT_EMAIL = 'support@16arena.com';
 export const SUPPORT_PHONE = '+919409651908';
 
 /** Approx. player count shown as social proof. Bump as you grow. */
-export const PLAYER_COUNT = '25,000+';
+export const PLAYER_COUNT = '40,000+';

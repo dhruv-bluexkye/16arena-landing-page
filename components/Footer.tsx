@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 import StoreButtons from './StoreButtons';
-import { PLAYER_COUNT } from '../config/links';
+import { PLAYER_COUNT, SHOP_URL } from '../config/links';
 import { SOCIALS } from '../lib/socials';
 import { scrollToSection } from '../lib/scroll';
 
@@ -47,6 +47,7 @@ const Footer: React.FC = () => {
 
           {/* Shop */}
           <FooterCol title="Shop">
+            <FooterAnchor href={SHOP_URL} external>Visit 16Arena Shop</FooterAnchor>
             <FooterAnchor href="/refund-policy">Refund Policy</FooterAnchor>
             <FooterAnchor href="/return-policy">Return Policy</FooterAnchor>
             <FooterAnchor href="/shipping-policy">Shipping Policy</FooterAnchor>
@@ -106,9 +107,13 @@ const FooterButton: React.FC<{ onClick: () => void; children: React.ReactNode }>
   </li>
 );
 
-const FooterAnchor: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
+const FooterAnchor: React.FC<{ href: string; external?: boolean; children: React.ReactNode }> = ({ href, external, children }) => (
   <li>
-    <a href={href} className="text-sm text-gray-400 hover:text-primary transition-colors">
+    <a
+      href={href}
+      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+      className="text-sm text-gray-400 hover:text-primary transition-colors"
+    >
       {children}
     </a>
   </li>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import StoreButtons from './StoreButtons';
-import { APP_STORE_URL, PLAY_STORE_URL } from '../config/links';
+import { APP_STORE_URL, PLAY_STORE_URL, SHOP_URL } from '../config/links';
 import heroBg from '../assets/arena-hero-bg.jpg';
 import heroNinja from '../assets/hero-ninja.png';
 import logo16arena from '../assets/logo-16arena.png';
@@ -48,6 +48,7 @@ const PRODUCTS = [
     appStore: APP_STORE_URL,
     playStore: PLAY_STORE_URL,
     website: null as string | null,
+    websiteLabel: null as string | null,
     note: null as string | null,
   },
   {
@@ -60,6 +61,7 @@ const PRODUCTS = [
     appStore: 'https://apps.apple.com/my/app/16score-live-esports-scores/id6751777140',
     playStore: 'https://play.google.com/store/apps/details?id=com.bluexkye.sixteenscore',
     website: null,
+    websiteLabel: null,
     note: null,
   },
   {
@@ -72,6 +74,7 @@ const PRODUCTS = [
     appStore: null,
     playStore: null,
     website: 'https://www.16tms.com/',
+    websiteLabel: '16tms.com',
     note: null,
   },
   {
@@ -83,8 +86,9 @@ const PRODUCTS = [
     desc: 'A digital marketplace for gamers to purchase game top-ups, gift cards, gaming vouchers, subscriptions, and other digital products.',
     appStore: null,
     playStore: null,
-    website: null,
-    note: 'Coming soon!',
+    website: SHOP_URL,
+    websiteLabel: 'shop.16arena.com',
+    note: 'Live now',
   },
 ];
 
@@ -192,7 +196,7 @@ const Company: React.FC = () => {
                           rel="noopener noreferrer"
                           className={`inline-flex items-center gap-1.5 text-sm font-condensed font-semibold uppercase tracking-widest ${p.accentText} hover:text-white transition-colors`}
                         >
-                          Visit 16tms.com
+                          Visit {p.websiteLabel}
                           <span className="material-symbols-outlined text-base">open_in_new</span>
                         </a>
                       ) : (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
-import { APP_STORE_URL } from '../config/links';
+import { APP_STORE_URL, SHOP_URL } from '../config/links';
 import { scrollToSection } from '../lib/scroll';
 import { navigate } from '../lib/router';
 
@@ -64,7 +64,17 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            <a
+              href={SHOP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-display font-bold uppercase tracking-wide clip-facet-sm text-primary-light border border-primary/40 bg-primary/10 hover:bg-primary/20 hover:border-primary hover:text-white transition-all"
+            >
+              <span className="material-symbols-outlined text-lg">storefront</span>
+              Shop
+            </a>
+
             <a
               href={APP_STORE_URL}
               target="_blank"
@@ -114,6 +124,16 @@ const Navbar: React.FC = () => {
             className="block w-full text-left px-4 py-3 rounded-lg text-base font-condensed font-medium uppercase tracking-wider text-gray-200 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all"
           >
             Company
+          </a>
+          <a
+            href={SHOP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+            className="flex items-center gap-2 w-full text-left px-4 py-3 rounded-lg text-base font-condensed font-medium uppercase tracking-wider text-gray-200 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all"
+          >
+            <span className="material-symbols-outlined text-xl text-primary-light">storefront</span>
+            Shop
           </a>
           <a
             href={APP_STORE_URL}
