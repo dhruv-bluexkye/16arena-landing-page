@@ -69,10 +69,12 @@ const Navbar: React.FC = () => {
               href={SHOP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-display font-bold uppercase tracking-wide clip-facet-sm text-primary-light border border-primary/40 bg-primary/10 hover:bg-primary/20 hover:border-primary hover:text-white transition-all"
+              className="group hidden md:inline-flex clip-facet-sm p-px bg-primary/40 hover:bg-primary transition-all"
             >
-              <span className="material-symbols-outlined text-lg">storefront</span>
-              Shop
+              <span className="inline-flex items-center justify-center gap-2 clip-facet-sm px-[19px] py-[9px] text-sm font-display font-bold uppercase tracking-wide text-primary-light bg-background-dark group-hover:bg-primary/15 group-hover:text-white transition-all">
+                <span className="material-symbols-outlined text-lg">storefront</span>
+                Shop
+              </span>
             </a>
 
             <a
